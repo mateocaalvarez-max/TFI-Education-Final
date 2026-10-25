@@ -5,40 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TFI-Education-Quienes-Somos</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/somos.css">
 </head>
 <body>
-    <img class="logo" src="../images/Logo.png" alt="TFI-Education">
-    <header>
-        <nav class="menu">
-            <ul>
-                <li class="menu_item"><a href="../index.html">Inicio</a></li>
-                <li class="menu_item active"><a href="somos.html">Quienes Somos</a></li>
-                <li class="menu_item"><a href="trabajos.html">Trabajos</a></li>
-                <li class="menu_item"><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <input type="checkbox" id="toggle-menu" class="checkbox-menu">
+    <header class="barra-superior">
+        <label for="toggle-menu" class="btn-menu">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+        </label>
+        <h1 class="logo">TFI Education</h1>
+        <a href="./pages/trabajos.html" class="btn-ingresar">Ingresar</a>
     </header>
-    <main>
-        <div class="docente">
-            <img class="docente_imagen" src="../images/Docente 1.jpg" alt="Docente 1">
-            <h2 class="docente_nombre">Docente 1</h2>
-            <p class="docente_carrera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit saepe numquam. Corrupti neque nisi vitae excepturi veritatis non nulla.</p>
+    <aside class="panel-lateral">
+        <label for="toggle-menu" class="btn-cerrar">&times;</label>
+        <h2 class="titulo-menu">Navegación</h2>
+        <ul class="menu">
+            <li class="menu_item active"><a href="../index.html">Inicio</a></li>
+            <li class="menu_item"><a href="somos.html">Quienes Somos</a></li>
+            <li class="menu_item"><a href="trabajos.html">Trabajos</a></li>
+            <li class="menu_item"><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="logo-ubi">
+            <h3>TFI Education</h3>
+            <h3>|</h3>
+            <h3>Argentina</h3> 
         </div>
-        <div class="docente">
-            <img class="docente_imagen" src="../images/Docente 2.jpg" alt="Docente 2">
-            <h2 class="docente_nombre">Docente 2</h2>
-            <p class="docente_carrera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta possimus nulla officiis a quasi rem ratione ea iure nobis.</p>
-        </div>
-        <div class="docente">
-            <img class="docente_imagen" src="../images/Docente 3.jpg" alt="Docente 3">
-            <h2 class="docente_nombre">Docente 3</h2>
-            <p class="docente_carrera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perspiciatis totam, odio possimus ipsum facilis sequi iste eaque corrupti sint!</p>
-        </div>
-        <div class="docente">
-            <img class="docente_imagen" src="../images/Docente 4.jpg" alt="Docente 4">
-            <h2 class="docente_nombre">Docente 4</h2>
-            <p class="docente_carrera">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, non inventore ullam voluptatem expedita magni assumenda eos voluptas numquam asperiores?</p>
-        </div>
+    </aside>
+    <main class="somo-contenido">
+        <section class="somo-hero">
+            <div class="somo-hero-contenedor">
+                <span class="etiqueta-institucional">ISFD Y T CIICAP - San Juan</span>
+                <h2>Quienes Somos - TFI Education</h2>
+                <h3>Trabajo Final Integrador - 2° Año del Profesorado en Educacion Secundaria en TIC</h3>
+                <p>Bienvenidos a nuestro entorno digital. Somos estudiantes de 2° año del Profesorado en Educación Secundaria en TIC del <strong>Instituto Superior de Formación Docente y Técnica CIICAP</strong>. Como parte de la evaluacion de el <strong>Trabajo Final Integrador</strong>, diseñamos este ecosistema educativo virutal con el objetivo de integrar la cultura digital, la innovación pedagógica y las mediaciones tecnológicas en la enseñanza técnica y secundaria.</p>
+            </div>
+        </section>
+
+        <section class="seccion-fundamentacion-tfi">
+            <div class="bloque-fundamentacion">
+                <h3>Fundamentación del Trabajo Final Integrador</h3>
+                <p>En el marco de la materia <em>Tecnológia de la Información y la Comunicación</em>, este proyecto aborda el desafio de transformar la aproximación espontánea de los estudiantes hacia la tecnológia en una alfabetización digital con sentido crítico, técnico y reflexivo.</p>
+                <p>A travéz de secuencias didácticas, recursos multimediales interactivos y la articulación de entornos virtuales de aprendizaje (EVA), nuestra propuesta demuestra como materias como robótica, la programación y el pensamiento computacional pueden ser enseñados promoviendo el trabajo colaborativo, la autonomía y la ciudadanía digital.</p>
+            </div>
+        </section>
+
+        <section class="seccion-ejes">
+            <h3 class="titulo-seccion">Ejes Formativos e Integración Curricular</h3>
+            <div class="grilla-ejes">
+                <article class="tarjeta-eje">
+                    <div class="icono-eje"></div>
+                    <h4>Robótica y Pensamiento Computacional</h4>
+                    <p>Integración didáctica de conceptos tecnológicos, algoritmos y automatización aplicados a la educación secundaria técnica.</p>
+                </article>
+
+                <article class="tarjeta-eje">
+                    <div class="icono-eje"></div>
+                    <h4>Entornos Virtuales de Aprendizaje (EVA)</h4>
+                    <p>Estructuración de aulas virtuales que combinan dinámicas sincrónicas, asincrónicas, simuladores y gamificación.</p>
+                </article>
+
+                <article class="tarjeta-eje">
+                    <div class="icono-eje"></div>
+                    <h4>Ciudadanía Digital y Netequeta</h4>
+                    <p>Fomento de normas de participación responsable, ética, segura y respetuosa en redes y entornos virtuales.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="seccion-equipo">
+            <div class="encabezado-equipo">
+                <h3 class="titulo-seccion">Nuestro Equipo de Desarrolladores</h3>
+                <p class="descripcion-equipo">Detrás de este ecosistema educativo digial se encuentra nuesto equipo de 4 estudiantes del Profesorado en TIC del ISFD y T CIICAP, comprometidos con la innovación educativa y la construcción colaborativa del conocimiento: <strong>Daniela Lucero Otiñano, Carolina Valdez, Atencio Benjamín y Mateo Agüero</strong>.
+                </p>
+            </div>
+            <div class="tarjetas-interactivas">
+                <div class="docente">
+                    <img class="docente-imagen" src="../images/Docente 1.jpg" alt="Docente 1">
+                    <div class="descripcion">
+                        <h2 class="docente_nombre">Docente 1</h2>
+                        <p class="docente_carrera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit saepe numquam. Corrupti neque nisi vitae excepturi veritatis non nulla.</p>  
+                    </div>
+                </div>
+                <div class="docente">
+                    <img class="docente-imagen" src="../images/Docente 2.jpg" alt="Docente 2">
+                    <div class="descripcion">
+                    <h2 class="docente_nombre">Docente 2</h2>
+                    <p class="docente_carrera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta possimus nulla officiis a quasi rem ratione ea iure nobis.</p> 
+                    </div>
+                </div>
+                <div class="docente">
+                    <img class="docente-imagen" src="../images/Docente 3.jpg" alt="Docente 3">
+                    <div class="descripcion">
+                        <h2 class="docente_nombre">Docente 3</h2>
+                        <p class="docente_carrera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perspiciatis totam, odio possimus ipsum facilis sequi iste eaque corrupti sint!</p>  
+                    </div>
+                </div>
+                <div class="docente">
+                    <img class="docente-imagen" src="../images/Docente 4.jpg" alt="Docente 4">
+                    <div class="descripcion">
+                        <h2 class="docente_nombre">Docente 4</h2>
+                        <p class="docente_carrera">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, non inventore ullam voluptatem expedita magni assumenda eos voluptas numquam asperiores?</p>   
+                    </div> 
+                </div>
+            </div>
+        </section>        
     </main>
+
+     <footer class="pie-pagina">
+        <div class="contenido-footer">
+            <div class="columna-footer">
+                <h3>TFI Education</h3>
+                <p>Plataforma Abierta de Innovación y Entornos Virtuales de Aprendizaje.</p>
+            </div>
+            <div class="columna-footer">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="somos.html">Quienes Somos</a></li>
+                    <li><a href="trabajos.html">Trabajos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="columna-footer">
+                <h4>Contacto e Institucional</h4>
+                <p>Email: contacto@tfieducation.edu.ar</p>
+                <p>Argentina</p>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            <p>&copy; 2026 TFI Education - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

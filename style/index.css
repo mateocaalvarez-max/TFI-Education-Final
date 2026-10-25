@@ -1,0 +1,183 @@
+/*Inicio*/
+
+.contenido-inicio{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.hero-inicio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: var(--color-tarjeta);
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+}
+
+.hero-texto{flex: 1;}
+
+.destacada{
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero-texto h2{
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.hero-texto p{
+    font-size: 1.05rem;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+}
+
+.hero-botones{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primario, .btn-secundario{
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primario{
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+}
+
+.btn-primario:hover {
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+    transform: translateY(-2px);
+}
+
+.btn-secundario{
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+}
+
+.btn-secundario:hover{
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+}
+
+.hero-multimedia{
+    flex: 1;
+    width: 100%;
+}
+
+.hero-multimedia iframe{
+    width: 100%;
+    height: 315px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+}
+
+/*Fundamentación pedagógica*/
+
+.seccion-fundamentacion{
+    background-color: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+}
+
+.caja-text-center{
+    max-width: 900px;
+    margin: 15px;
+}
+
+.seccion-fundamentacion h3{
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+.seccion-fundamentacion p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/*Pilares, Recorrido, Categorias*/
+
+.title-seccion{
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle-seccion{
+    text-align: center;
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+}
+
+/*CSS Grid*/
+
+.pilares, .recorrido, .categoria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/*Estilo de Tarjetas*/
+
+.tarjeta-pilar, .tarjeta-recorrido, .tarjeta-categoria{
+    background-color: var(--color-tarjeta);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-pilar:hover, .tarjeta-recorrido:hover, .tarjeta-categoria:hover{
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+}
+
+.icono.pilar{ font-size: 2.5rem; margin-bottom: 15px;}
+
+.numero-recorrido{
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: var(--color-acento-hover);
+    margin-bottom: 10px;
+}
+
+.tarjeta-pilar h4, .tarjeta-recorrido h4, .tarjeta-categoria h4{
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    margin-bottom: 10px;
+}
+
+.tarjeta-pilar p, .tarjeta-recorrido p, .tarjeta-categoria p{
+    font-size: 0.95rem;
+    color: var(--color-texto-suave);
+}

@@ -1,0 +1,294 @@
+/*Estilo*/
+.contenido-trabajo{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/*1- Seccion Hero*/
+
+.hero-seccion-trabajo{
+    background-color: var(--color-tarjeta);
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+    border-left: 6px solid var(--color-acento-hover);
+}
+
+.hero-tarjeta-trabajo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.etiqueta-materia{
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.hero-seccion-trabajo h2{
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    line-height: 1.25;
+}
+
+.hero-seccion-trabajo h3{
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-acento-hover);
+}
+
+.hero-seccion-trabajo p{
+    font-size: 1.05rem;
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+/*2- Diseño*/
+
+.materia-seccion-curricular{
+    background-color: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+}
+
+.materia-nivel{
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-texto-suave);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.materia-bloque h3{
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.materia-bloque h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-acento-hover);
+    border-radius: 2px;
+}
+
+.materia-bloque p{
+    font-size: 1.05rem;
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+/*3- Tarjetas Clases*/
+
+.seccion-clase .seccion-titulo{
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.seccion-clase .seccion-subtitulo{
+    text-align: center;
+    color: var(--color-texto-suave);
+    margin-bottom: 35px;
+}
+
+.contenedor-clases{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/*Estructura Tarjeta*/
+
+.tarjeta-clase{
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 360px;
+    height: 400px;
+    background-color: var(--color-tarjeta);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tarjeta-clase:hover{
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+}
+
+/*Fondo de Imagen*/
+
+.clase-imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-clase:hover .clase-imagen{
+    transform: scale(1.1);
+}
+
+/*Overlay Interactivo*/
+
+.clase-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+    rgba(15, 23, 42, 0.92) 0%,
+    rgba(15, 23, 42, 0.78) 60%,
+    rgba(15, 23, 42, 0.45) 100%);
+    color: var(--color-blanco);
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+}
+
+.tarjeta-clase:hover .clase-overlay{
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(
+        90deg,
+        rgba(15, 23, 42, 0.96) 0%,
+        rgba(15, 23, 42, 0.88) 70%,
+        rgba(2, 132, 199, 0.6) 100%
+    );
+}
+
+/*Estado / Badges*/
+.badge-estado{
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-estado.disponible{
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.badge-estado.proximamente{
+    background-color: #f59e0b;
+    color: #ffffff;
+}
+
+/*Contenido dentro Overlay*/
+
+.clase-titulo{
+    font-size: 1.3rem;
+    color: var(--color-acento);
+    font-weight: 700;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.tarjeta-clase:hover .clase-titulo{color: var(--color-acento);}
+
+.clase-descripcion{
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*Botón dentro Overlay*/
+
+.btn-acceder{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-acento-hover);
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-clase:hover .btn-acceder{
+    background-color: var(--color-acento);
+    color: var(--color-principal);
+}
+
+/*Tarjeta "Proximamente" */
+
+.tarjeta-clase.proximamente{opacity: 0.9;}
+
+.tarjeta-clase.proximamente .clase-imagen{filter: grayscale(40%);}
+
+/*4- Adaptabilidad Movil*/
+
+@media (max-width: 900px){
+    .tarjeta-clase{
+        height: auto;
+        min-height: 260px;
+    }
+
+    .clase-overlay{
+        padding: 25px 25px;
+        background: rgba(15, 23, 42, 0.90);
+    }
+
+    .clase-titulo{
+        font-size: 1.3rem;
+    }
+
+    .clase-descripcion{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px){
+    .contenido-trabajo{
+        padding: 20px 12px;
+        gap: 40px;
+    }
+
+    .hero-seccion-trabajo, .materia-seccion-curricular{
+        padding: 25px 20px;
+    }
+
+    .clase-overlay{
+        padding: 20px;
+    }
+}
