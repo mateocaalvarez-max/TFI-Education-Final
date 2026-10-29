@@ -1,34 +1,181 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 1: Descubriendo la Robótica - TFI Education</title>
     <link rel="stylesheet" href="../../style/style.css">
+    <style>
+        /* Fondo general claro y limpio */
+        body {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenido-principal {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        h2 {
+            color: #0f172a;
+            border-bottom: 3px solid #0284c7;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: #0369a1;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo Desplegable para la pregunta con tonos claros */
+        details.desplegable-pregunta {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        details.desplegable-pregunta:hover {
+            background-color: #f1f5f9;
+        }
+        details.desplegable-pregunta summary {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #0369a1;
+            outline: none;
+        }
+        details.desplegable-pregunta p {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* Estilo Abanico / Desplegable para Tipos de Robots en tonos claros */
+        .contenedor-abanico {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .tarjeta-robot-abanico {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .tarjeta-robot-abanico:hover {
+            border-color: #0284c7;
+        }
+        .tarjeta-robot-abanico summary {
+            padding: 14px 18px;
+            font-weight: bold;
+            color: #1e293b;
+            cursor: pointer;
+            background-color: #f1f5f9;
+        }
+        .tarjeta-robot-abanico summary:hover {
+            background-color: #e2e8f0;
+            color: #0369a1;
+        }
+        .contenido-abanico {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+        .contenido-abanico img {
+            width: 130px;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+            border: 1px solid #cbd5e1;
+        }
+        .contenido-abanico p {
+            margin: 0;
+            color: #334155;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
+
     <header class="barra-superior">
         <h1 class="logo">TFI Education</h1>
-        <a href="../../índice.html" class="btn-ingresar">Volver al Inicio</a>
+        <a href="../../index.html" class="btn-ingresar">Volver al Inicio</a>
     </header>
 
-    <main class="contenido-principal" style="padding: 40px; max-width: 800px; margin: 0 auto;">
+    <main class="contenido-principal">
         <h2>Clase 1: Descubriendo la Robótica</h2>
-        
-        <section style="margin-top: 20px;">
-            <h3>¿Qué es la robótica?</h3>
-            <p>La robótica es una ciencia y rama de la tecnología que combina disciplinas como la ingeniería mecánica, la ingeniería electrónica, la ciencia de la computación y la inteligencia artificial. Su objetivo principal es el diseño, construcción, operación y aplicación de robots para realizar tareas automatizadas, asistir a los seres humanos o explorar entornos complejos.</p>
+
+        <!-- ¿Qué es la robótica? desplegable -->
+        <section>
+            <details class="desplegable-pregunta">
+                <summary>¿Qué es la robótica?</summary>
+                <p>La robótica es una ciencia y rama de la tecnología que combina disciplinas como la ingeniería mecánica, la ingeniería electrónica, la ciencia de la computación y la inteligencia artificial. Su objetivo principal es el diseño, construcción, operación y aplicación de robots para realizar tareas automatizadas, asistir a los seres humanos o explorar entornos complejos.</p>
+            </details>
         </section>
 
-        <section style="margin-top: 30px;">
+        <!-- Tipos de robots en abanico -->
+        <section>
             <h3>Tipos de Robots</h3>
-            <ul>
-                <li><strong>Robots Industriales:</strong> Empleados en fábricas y cadenas de montaje para tareas repetitivas de alta precisión, como soldadura, ensamblaje y pintura.</li>
-                <li><strong>Robots de Servicios:</strong> Orientados a asistir directamente a las personas, ya sea en el ámbito doméstico (aspiradoras inteligentes) o en el profesional (medicina, logística y hotelería).</li>
-                <li><strong>Robots Móviles:</strong> Dotados de sistemas de locomoción (ruedas, orugas o patas) que les permiten desplazarse de manera autónoma o controlada por terrenos diversos.</li>
-                <li><strong>Robots Humanoides:</strong> Diseñados para imitar la morfología y los movimientos del ser humano, facilitando una interacción más natural en entornos sociales.</li>
-            </ul>
+            
+            <div class="contenedor-abanico">
+    <!-- Robots Industriales -->
+    <details class="tarjeta-robot-abanico">
+        <summary>Robots Industriales</summary>
+        <div class="contenido-abanico">
+            <img src="../../images/robot industrial.jpg" alt="Robots Industriales">
+            <p>Empleados en fábricas y cadenas de montaje para tareas repetitivas de alta precisión, como soldadura, ensamblaje y pintura.</p>
+        </div>
+    </details>
+
+    <!-- Robots de Servicios -->
+    <details class="tarjeta-robot-abanico">
+        <summary>Robots de Servicios</summary>
+        <div class="contenido-abanico">
+            <img src="../../images/robot servicio.jpg" alt="Robots de Servicios">
+            <p>Orientados a asistir directamente a las personas, ya sea en el ámbito doméstico (aspiradoras inteligentes) o en el profesional (medicina, logística y hotelería).</p>
+        </div>
+    </details>
+
+    <!-- Robots Móviles -->
+    <details class="tarjeta-robot-abanico">
+        <summary>Robots Móviles</summary>
+        <div class="contenido-abanico">
+            <img src="../../images/robot movil.jpg" alt="Robots Móviles">
+            <p>Dotados de sistemas de locomoción (ruedas, orugas o patas) que les permiten desplazarse de manera autónoma o controlada por terrenos diversos.</p>
+        </div>
+    </details>
+
+    <!-- Robots Humanoides -->
+    <details class="tarjeta-robot-abanico">
+        <summary>Robots Humanoides</summary>
+        <div class="contenido-abanico">
+            <img src="../../images/robot humanoide.jpg" alt="Robots Humanoides">
+            <p>Diseñados para imitar la morfología y los movimientos del ser humano, facilitando una interacción más natural en entornos sociales.</p>
+        </div>
+    </details>
+</div>
         </section>
     </main>
+
 </body>
 </html>
